@@ -21,9 +21,9 @@ def print_cookies(response):
     
     for cookie in response.cookies:
         date = datetime.datetime.fromtimestamp(cookie.expires).strftime('%Y-%m-%d %H:%M:%S')
-        print(f"Cookie Name: {cookie.name}")
-        print(f"Expires: {date}")
         valid_for = datetime.datetime.fromtimestamp(cookie.expires)- datetime.datetime.now()
+        print(f"Cookie Name: {cookie.name}")
+        print(f"Expires: {date}")        
         print(f"Valid for: {valid_for}")
         print("--------------------")
     print()
