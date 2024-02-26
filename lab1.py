@@ -28,10 +28,11 @@ def print_cookies(response):
 
 
 def main():
-    url = input("\nEnter a URL: ")
+    url = input("\nEnter a URL (press enter for default): ")
     if not url:
         # url = 'http://python.org/'
         url = 'https://www.google.com'
+        print(f"Default URL: {url}")
     with requests.get(url) as response:
         # print_headers(response)
         print_server_software(response)
