@@ -36,7 +36,7 @@ def main():
         url = 'https://www.google.com'
         print(f"Default URL: {url}")
     with requests.get(url) as response:
-        # print_headers(response)
+        print_headers(response)
         print_server_software(response)
         print_cookies(response)
 
